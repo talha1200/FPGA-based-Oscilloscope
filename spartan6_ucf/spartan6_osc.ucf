@@ -1,0 +1,74 @@
+######## Main Clock ###################################
+NET clk LOC = T8 | TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 50000 kHz;
+
+
+
+########## VGA Pins ######################################################################
+NET red0                           LOC = M11  | IOSTANDARD  = "LVCMOS33";        ## VGA R0
+NET red1                           LOC = M12  | IOSTANDARD  = "LVCMOS33";        ## VGA R1
+NET red2                           LOC = L12  | IOSTANDARD   = "LVCMOS33";       ## VGA R2
+NET red3                           LOC = N14  | IOSTANDARD  = "LVCMOS33";        ## VGA R3
+NET red4                           LOC = M13  | IOSTANDARD = "LVCMOS33";         ## VGA R4
+NET green0                         LOC = M9   | IOSTANDARD = "LVCMOS33";         ## VGA G0
+NET green1                         LOC = N9   | IOSTANDARD = "LVCMOS33";         ## VGA G1
+NET green2                         LOC = P9   | IOSTANDARD = "LVCMOS33";         ## VGA G2
+NET green3                         LOC = L10  | IOSTANDARD = "LVCMOS33";         ## VGA G3
+NET green4                         LOC = M10  | IOSTANDARD = "LVCMOS33";         ## VGA G4
+NET green5                         LOC = P11  | IOSTANDARD = "LVCMOS33";         ## VGA G4
+NET blue0                          LOC = P7   | IOSTANDARD = "LVCMOS33";         ## VGA B0
+NET blue1                          LOC = M7   | IOSTANDARD = "LVCMOS33";         ## VGA B1
+NET blue2                          LOC = P8   | IOSTANDARD = "LVCMOS33";         ## VGA B2
+NET blue3                          LOC = N8   | IOSTANDARD = "LVCMOS33";         ## VGA B3
+NET blue4                          LOC = L7   | IOSTANDARD = "LVCMOS33";         ## VGA B4
+NET vsync                          LOC = L13  | IOSTANDARD = "LVCMOS33";         ## VGA VS
+NET hsync                          LOC = M14  | IOSTANDARD = "LVCMOS33";         ## VGA HS    
+
+################ AC/DC Selector Pin ######################################################
+NET AC_DC_Select                   LOC = L3   | IOSTANDARD = "LVCMOS33";         
+NET "AC_DC_Select" CLOCK_DEDICATED_ROUTE = FALSE;
+
+################# Time Per Division Knob Pins ############################################
+NET TimeperDiv<0>                  LOC = J16  | IOSTANDARD = "LVCMOS33";       
+NET TimeperDiv<1>                  LOC = K15  | IOSTANDARD = "LVCMOS33";        
+NET TimeperDiv<2>                  LOC = M16  | IOSTANDARD = "LVCMOS33";        
+NET TimeperDiv<3>                  LOC = N16  | IOSTANDARD = "LVCMOS33";    
+
+################# Volt Per Division Knob Pins ############################################
+NET VoltperDiv<0>                  LOC = P15  | IOSTANDARD = "LVCMOS33";       
+NET VoltperDiv<1>                  LOC = R15  | IOSTANDARD = "LVCMOS33";        
+NET VoltperDiv<2>                  LOC = R14  | IOSTANDARD = "LVCMOS33";        
+NET VoltperDiv<3>                  LOC = T13  | IOSTANDARD = "LVCMOS33";      
+
+############## Trigger Knob Pins #########################################################
+NET Trigger<0>                     LOC = T12  | IOSTANDARD = "LVCMOS33";        
+NET Trigger<1>                     LOC = T9  | IOSTANDARD = "LVCMOS33";        
+NET Trigger<2>                     LOC = T7  | IOSTANDARD = "LVCMOS33";        
+NET Trigger<3>                     LOC = T6   | IOSTANDARD = "LVCMOS33";       
+NET Trigger<4>                     LOC = R5   | IOSTANDARD = "LVCMOS33";       
+NET Trigger<5>                     LOC = R2   | IOSTANDARD = "LVCMOS33";        
+NET Trigger<6>                     LOC = M4   | IOSTANDARD = "LVCMOS33";        
+NET Trigger<7>                     LOC = N6   | IOSTANDARD = "LVCMOS33";        
+
+########### ADC Clock Define #############################################################
+NET ADC_clk                        LOC = C10  | IOSTANDARD = "LVCMOS33";        
+PIN "ClockGEN/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;   
+
+############# ADC Pins ###################################################################
+NET addata<0>                      LOC = B15  | IOSTANDARD = "LVCMOS33";        
+NET addata<1>                      LOC = B16  | IOSTANDARD = "LVCMOS33";        
+NET addata<2>                      LOC = C15  | IOSTANDARD = "LVCMOS33";        
+NET addata<3>                      LOC = C16  | IOSTANDARD = "LVCMOS33";     
+NET addata<4>                      LOC = D16  | IOSTANDARD = "LVCMOS33";   
+NET addata<5>                      LOC = E15  | IOSTANDARD = "LVCMOS33";    
+NET addata<6>                      LOC = C9   | IOSTANDARD = "LVCMOS33";      
+NET addata<7>                      LOC = E11  | IOSTANDARD = "LVCMOS33";      
+
+
+   
+
+
+
+
+
+

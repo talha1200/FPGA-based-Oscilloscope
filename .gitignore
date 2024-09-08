@@ -1,0 +1,3 @@
+/rtl/*
+!rtl/oscilloscope.sv
+/doc/FPGA-Based-Oscilloscope.pdf

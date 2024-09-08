@@ -7,35 +7,36 @@ This project implements a basic FPGA-based oscilloscope that captures ADC data a
 
 ## Features
 
-- **640x480 VGA Output**: Real-time waveform display on a VGA monitor.
+- **640x480 VGA Output**   : Real-time waveform display on a VGA monitor.
 - **Time/Division Control**: Adjust time scale via knob input.
 - **Volt/Division Control**: Adjust voltage scale via knob input.
-- **AC/DC Selector**: Switch between AC and DC signal acquisition.
-- **Triggering**: Stabilize waveform display with trigger threshold.
-- **Dual-Port Block RAM**: Temporarily store ADC samples using Xilinx BlockRAM IP.
+- **AC/DC Selector**       : Switch between AC and DC signal acquisition.
+- **Triggering**           : Stabilize waveform display with trigger threshold.
+- **Dual-Port Block RAM**  : Temporarily store ADC samples using Xilinx BlockRAM IP.
 - **FPGA Clock Generation**: Two clocks (25MHz for VGA and 16MHz for Atmega328).
 
 ## Inputs/Outputs
 
 ### Inputs:
-- `clk`: 50MHz main clock input to the FPGA.
-- `addata`: 8-bit ADC data input.
+- `clk`         : 50MHz main clock input to the FPGA.
+- `addata`      : 8-bit ADC data input.
 - `AC_DC_Select`: Select between AC or DC coupling for the input signal.
-- `trigger`: Set the trigger level for waveform capture.
+- `trigger`     : Set the trigger level for waveform capture.
 
 ### Outputs:
-- `VGA_R`: 3-bit red signal to VGA.
-- `VGA_G`: 3-bit green signal to VGA.
-- `VGA_B`: 2-bit blue signal to VGA.
+- `VGA_R`    : 5-bit red signal to VGA.
+- `VGA_G`    : 6-bit green signal to VGA.
+- `VGA_B`    : 5-bit blue signal to VGA.
 - `VGA_HSYNC`: Horizontal sync signal to VGA.
 - `VGA_VSYNC`: Vertical sync signal to VGA.
 
 ## Project Structure
 
-- `src/` : Contains Verilog source files for the FPGA implementation.
-- `sim/` : Testbenches and simulation scripts.
+- `src/`         : Contains Verilog source files for the FPGA implementation.
+- `sim/`         : Testbenches and simulation scripts. (to be added)
 - `constraints/` : XDC constraint files for pin assignments and clock configurations.
-- `docs/` : Documentation related to the project.
+- `docs/`        : Documentation related to the project.
+- `gallery`      : images and video demo
 
 ## Building and Running
 
@@ -57,6 +58,9 @@ This project implements a basic FPGA-based oscilloscope that captures ADC data a
 ![Oscilloscope triangular Waveform](gallery/tri.png)
 
 ## Video
+
+### demo video
+![Oscilloscope Demo](gallery/sine_demo.mp4)
 
 
 ## Future Plans

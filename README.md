@@ -2,8 +2,9 @@
 
 ## Overview
 
-This project implements a basic FPGA-based oscilloscope that captures ADC data and displays the waveform on a VGA monitor. The oscilloscope supports adjustable time and voltage divisions, AC/DC signal selection, and trigger functionality to stabilize the waveform. The design is implemented using Verilog and targets a 640x480 VGA display.
+This project implements a basic FPGA-based oscilloscope that captures ADC data and displays the waveform on a VGA monitor. The oscilloscope supports adjustable time and voltage divisions via arduino uno (here arduino is used as programable ADC converting knobs reading into digital signals), AC/DC signal selection, and trigger functionality to stabilize the waveform. The design is implemented using Verilog and targets a 640x480 VGA display.
 
+![Oscilloscope](gallery/osc.jpg)
 
 ## Features
 
